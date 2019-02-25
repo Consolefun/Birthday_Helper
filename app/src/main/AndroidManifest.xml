@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.birthday_helper">
+
+
+    <application
+        android:name=".Birthday_Notifier"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_reminder_birthcake"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_reminder_birthcake_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+
+        <activity android:name=".Question"
+            android:label="question"></activity>
+
+
+        <receiver android:name=".AlarmReceiver">
+            <intent-filter>
+                <action android:name="singh.ajit.action.DISPLAY_NOTIFICATION"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
