@@ -14,6 +14,8 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.DatePicker;
@@ -44,15 +46,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-        /*if(savedInstanceState== null) {
+        if(savedInstanceState== null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new UserinfoFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_userinfo);
-        }*/
-
+        }
 
     }
-
+    // add these items to navigation view.
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch(menuItem.getItemId()){
@@ -78,7 +79,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_question:
                 Intent intent1 = new Intent(this, Question.class);
                 this.startActivity(intent1);
-                return true;
+                //onBackPressed();
+                break;
 
         }
         drawer.closeDrawer(Gravity.START);
@@ -87,11 +89,31 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public void onBackPressed() {
+
         if(drawer.isDrawerOpen(GravityCompat.START)){
             drawer.closeDrawer(Gravity.START);
         }
         else {
             super.onBackPressed();
+        }
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater _inflater = getMenuInflater();
+        _inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        switch(item.getItemId()){
+            case R.id.food_id:
+                Intent intent1 = new Intent(this, food.class);
+                this.startActivity(intent1);
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
 }

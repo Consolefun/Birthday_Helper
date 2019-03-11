@@ -16,18 +16,30 @@ import android.view.ViewGroup;
 import android.widget.DatePicker;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.Calendar;
 
 public class UserinfoFragment extends Fragment  {
-
+    TextView DisplayDate;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_userinfo,container, false);
+        View rootView = inflater.inflate(R.layout.fragment_userinfo,container, false);
+
+        //DisplayDate = (TextView) rootView.findViewById(R.id.content1);
+        //DisplayDate.setText(((Question)getActivity()).mDisplayDate.getText());
+        return rootView;
 
 
     }
+    public UserinfoFragment(){
 
+    }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
 
+        super.onViewCreated(view, savedInstanceState);
+    }
 }

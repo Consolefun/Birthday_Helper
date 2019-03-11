@@ -1,67 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgoundwindow"
     tools:context=".Question">
+    <include
+        android:id="@+id/toolbarquestion"
+
+        layout="@layout/toolbarfood"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
         android:layout_centerHorizontal="true"
-        android:text="what_is_your_birthday?"
-        android:textSize="20sp" />
-
-    <TextView
-        android:id="@+id/tvDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:text="select_date"
-        android:textSize="20sp" />
+        android:text="Enter your name below"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="15dp"
+        android:layout_marginTop="80dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="How many hours do you want \n to spend on your Birthday?"
-        android:textSize="15sp"
+        android:text="When is your birthday?"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="15dp"
         android:layout_marginTop="140dp"/>
-
-    <EditText
-        android:id="@+id/edit_hours"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
-        android:layout_centerHorizontal="true"
-        android:inputType="text"
-        android:hint="hours" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text = "How much money do you want to spend?"
-        android:textSize="15sp"
-        android:layout_marginTop="250dp"/>
-    <EditText
-        android:id="@+id/edit_money"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="270dp"
-        android:layout_centerHorizontal="true"
-        android:inputType="numberDecimal"
-        android:hint="money"/>
     <Button
-
+        android:id="@+id/btnNotify"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save"
-        android:layout_marginTop="310dp"
-        android:onClick="sendOnNotify"
         android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="56dp"
+        android:text="Set Date/Time" />
+
+    <TextView
+        android:id="@+id/Date_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="220dp"
+
+        android:hint="Display Date"/>
+
+    <TextView
+        android:id="@+id/Time_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="240dp"
+
+        android:hint="Display Time"
+         />
+
+
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:hint="Enter your name"
+        android:inputType="textPersonName"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/moneyquestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/design_default_color_primary"
+        android:text="How much money do\nyou want to spend?"
+        android:textSize="15dp"
+        android:layout_marginTop="280dp"/>
+
+    <EditText
+        android:id="@+id/money_inputid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/moneyquestion"
+        android:layout_marginTop="-2dp"
+        android:hint="$"
+        android:inputType="text"
+        android:textSize="15dp"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/hourquestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/money_inputid"
+        android:textColor="@color/design_default_color_primary"
+        android:text="How many hours\ndo you want to spend?"
+        android:textSize="15dp"
         />
+    <EditText
+        android:id="@+id/hour_inputid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hourquestion"
+
+        android:hint="enter number of hours"
+        android:inputType="text"
+        android:textSize="15dp"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/sportquestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/hour_inputid"
+        android:textColor="@color/design_default_color_primary"
+        android:text="Do you like sport?\n(pick yes or no)"
+        android:textSize="15dp"
+        />
+    <EditText
+        android:id="@+id/sport_inputid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sportquestion"
+        android:hint="enter yes or no"
+        android:inputType="textPersonName"
+        android:textSize="15dp"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/save_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sport_inputid"
+        android:text="Save"
+        android:layout_centerHorizontal="true"/>
 
 
 </RelativeLayout>
+</ScrollView>
