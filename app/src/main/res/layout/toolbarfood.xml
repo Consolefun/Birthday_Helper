@@ -3,8 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
     android:background="@color/color_yellow_brown"
-    android:backgroundTint="@color/colordark"
-    android:elevation="8dp"
-    android:theme="@style/AppTheme.TransparentTheme">
+    android:backgroundTint="@color/mdtp_transparent_black"
+    android:elevation="8dp">
 
 </android.support.v7.widget.Toolbar>

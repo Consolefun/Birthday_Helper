@@ -4,24 +4,30 @@
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+
         <item
             android:id="@+id/nav_userinfo"
             android:icon="@drawable/ic_menu_userinfo"
-            android:title="User Information" />
-        <item
-            android:id="@+id/nav_entertainment"
-            android:icon="@android:drawable/btn_star"
-            android:title="Entertainment" />
-        <item
-            android:id="@+id/nav_hourmoney"
-            android:icon="@android:drawable/ic_menu_compass"
-            android:title="Cooking recipes" />
+            android:title="User's info" />
+
         <item
             android:id="@+id/nav_question"
             android:icon="@android:drawable/ic_menu_help"
             android:title="Birthday Planner" />
 
     </group>
+    <item android:title = "Categories">
+        <menu>
+            <item
+                android:id="@+id/nav_entertainment"
+                android:icon="@android:drawable/ic_menu_mapmode"
+                android:title="entertainment" />
+            <item
+                android:id="@+id/nav_chillrelax"
+                android:icon="@mipmap/hotel"
+                android:title="Chill/Relax" />
+        </menu>
+    </item>
 
     <item android:title="Communicate">
         <menu>

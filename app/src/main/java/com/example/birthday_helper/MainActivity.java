@@ -48,8 +48,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
         if(savedInstanceState== null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new UserinfoFragment()).commit();
+                    new EntertainmentFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_userinfo);
+        }
+        if(savedInstanceState == null){
+            Intent intent = new Intent(this, Question.class);
+            //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK| Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
+            startActivity(intent);
         }
 
     }
@@ -58,18 +63,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch(menuItem.getItemId()){
             case R.id.nav_userinfo:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new UserinfoFragment()).commit();
-
+                Intent intent = new Intent(this, UserinfoActivity.class);
+                this.startActivity(intent);
                 break;
             case R.id.nav_entertainment:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new EntertainmentFragment()).commit();
                 break;
-            case R.id.nav_hourmoney:
+            case R.id.nav_chillrelax:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new HourmoneyFragment()).commit();
+                        new ChillrelaxFragment()).commit();
                 break;
+
             case R.id.nav_share:
                 Toast.makeText(this,"Share", Toast.LENGTH_SHORT).show();
                 break;
@@ -79,8 +84,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_question:
                 Intent intent1 = new Intent(this, Question.class);
                 this.startActivity(intent1);
-                //onBackPressed();
-                break;
+                return true;
 
         }
         drawer.closeDrawer(Gravity.START);

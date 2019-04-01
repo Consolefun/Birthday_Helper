@@ -15,11 +15,11 @@ public class food extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbarfood);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        toolbar.setPadding(0,getStatusBarHeight(),0,0);
+        //toolbar.setPadding(0,getStatusBarHeight(),0,0);
         getSupportActionBar().setTitle("Food Recipes");
     }
-    private int getStatusBarHeight() {
+
+    /*private int getStatusBarHeight() {
         int height;
 
         Resources myResources = getResources();
@@ -36,5 +36,5 @@ public class food extends AppCompatActivity {
         }
 
         return height;
-    }
+    }*/
 }

@@ -104,10 +104,9 @@ public class Question extends AppCompatActivity implements DatePickerDialog.OnDa
         });
         Toolbar toolbar = findViewById(R.id.toolbarquestion);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        toolbar.setPadding(0,getStatusBarHeight(),0,0);
+
         getSupportActionBar().setTitle("Birthday Planner");
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         loaddata();
         updatetext();
 
@@ -149,26 +148,6 @@ public class Question extends AppCompatActivity implements DatePickerDialog.OnDa
         hour_input.setText(text4);
         money_input.setText(text5);
     }
-    private int getStatusBarHeight() {
-        int height;
-
-        Resources myResources = getResources();
-        int idStatusBarHeight = myResources.getIdentifier(
-                "status_bar_height", "dimen", "android");
-        if (idStatusBarHeight > 0) {
-            height = getResources().getDimensionPixelSize(idStatusBarHeight);
-            /*Toast.makeText(this,
-                    "Status Bar Height = " + height,
-                    Toast.LENGTH_LONG).show();*/
-        }else{
-            height = 0;
-            Toast.makeText(this,
-                    "Resources NOT found",
-                    Toast.LENGTH_LONG).show();
-        }
-
-        return height;
-    }
 
     @Override
     public void onDateSet(DatePickerDialog view, int year, int monthOfYear, int dayOfMonth) {
@@ -193,7 +172,7 @@ public class Question extends AppCompatActivity implements DatePickerDialog.OnDa
         now.set(Calendar.HOUR_OF_DAY,hourOfDay);
         now.set(Calendar.MINUTE,minute);
         now.set(Calendar.SECOND,second);
-        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+        Intent intent = new Intent(getApplicationContext(),UserinfoActivity.class);
         intent.putExtra("Userinfo_fragment","favoritesMenuItem");
         //mDisplayTime = (TextView) findViewById(R.id.Time_view);
         String text = " "+"at ";

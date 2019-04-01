@@ -2,6 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.birthday_helper">
 
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permisson.READ_GSERVICES"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
 
@@ -12,10 +22,30 @@
         android:roundIcon="@mipmap/ic_reminder_birthcake_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".food"
-            android:parentActivityName=".MainActivity"
-            android:label="Food Recipe">
-        </activity>
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity android:name=".Chillrelax_activity_list"
+            android:label="chill/relax"></activity>
+
+        <activity
+            android:name=".Entertainment_map"
+            android:label="@string/title_activity_entertainment_map"></activity>
+        <activity android:name=".UserinfoActivity" />
+        <activity
+            android:name=".food"
+            android:label="Food Recipe"
+            android:parentActivityName=".MainActivity" />
 
         <receiver
             android:name=".ActionReceiver"
@@ -36,8 +66,7 @@
 
         <activity
             android:name=".Question"
-            android:parentActivityName=".MainActivity"
-            ></activity>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">

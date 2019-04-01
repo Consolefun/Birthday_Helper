@@ -30,7 +30,7 @@ import static com.example.birthday_helper.Notification.NotificationEntry.NOTIFIC
 import static com.example.birthday_helper.Notification.NotificationEntry.TABLE_NAME;
 import static com.example.birthday_helper.NotificationPublisher.NOTIFICATION_ID;
 
-// All the java file that link to notifyme was reference from this source https://www.youtube.com/watch?v=oLngUva-Ves&t=428s
+// All the java files that link to notifyme was reference from this source https://www.youtube.com/watch?v=oLngUva-Ves&t=428s
 
 public class NotifyMe {
 
