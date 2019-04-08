@@ -145,7 +145,7 @@ public class Entertainment_map extends FragmentActivity implements
         googleURL.append("&radius=" + ProximityRadius);
         googleURL.append("&type=" + nearbyPlace);
         googleURL.append("&sensor=true");
-        googleURL.append("&key=" + "AIzaSyD6q84yBa3hYB2Ra7JZfSVMR1Qy2k0X2nU"); // This is not the correct API key. Need to pay to get the one for this app
+        googleURL.append("&key=" + "AIzaSyDZGyv4d8QlcyNYmWmkE-yPNO58ePCWqB8"); // This is not the correct API key. Need to pay to get the one for this app
 
         Log.d("GoogleMapsActivity", "url = " + googleURL.toString());
 
