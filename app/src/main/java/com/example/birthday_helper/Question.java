@@ -97,9 +97,11 @@ public class Question extends AppCompatActivity implements DatePickerDialog.OnDa
             }
         });
         savebutton.setOnClickListener(new View.OnClickListener() {
+            Intent intent = new Intent(getApplicationContext(),UserinfoActivity.class);
             @Override
             public void onClick(View v) {
                 savedata();
+                startActivity(intent);
             }
         });
         Toolbar toolbar = findViewById(R.id.toolbarquestion);

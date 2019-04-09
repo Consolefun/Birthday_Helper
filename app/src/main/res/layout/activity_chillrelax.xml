@@ -69,14 +69,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/button_youtube"
-        android:text="Click to open anime"/>
+        android:text="Click to open an anime channel"/>
     <Button
         android:id="@+id/button_anime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/view5"
         android:onClick="open_youtube"
-        android:text="Anime" />
+        android:text="Crunchyroll" />
 
 
 </RelativeLayout>

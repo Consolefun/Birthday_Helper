@@ -36,5 +36,10 @@ public class Chillrelax_activity_list extends AppCompatActivity {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com"));
         startActivity(browserIntent);
     }
+    public void open_crunchyroll(View view){
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.crunchyroll.com"));
+        startActivity(browserIntent);
+
+    }
 
 }
