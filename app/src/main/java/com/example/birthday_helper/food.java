@@ -21,20 +21,17 @@ public class food extends AppCompatActivity {
 
     /*private int getStatusBarHeight() {
         int height;
-
         Resources myResources = getResources();
         int idStatusBarHeight = myResources.getIdentifier(
                 "status_bar_height", "dimen", "android");
         if (idStatusBarHeight > 0) {
             height = getResources().getDimensionPixelSize(idStatusBarHeight);
-
         }else{
             height = 0;
             Toast.makeText(this,
                     "Resources NOT found",
                     Toast.LENGTH_LONG).show();
         }
-
         return height;
     }*/
 }

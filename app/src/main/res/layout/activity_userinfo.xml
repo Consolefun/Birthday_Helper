@@ -18,4 +18,37 @@
         android:layout_marginTop="100dp"
         android:layout_centerHorizontal="true" />
 
+    <EditText
+        android:id="@+id/etTitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="8dp"
+        android:hint="Enter your name"
+        android:inputType="textPersonName"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="15dp" />
+
+    <EditText
+        android:id="@+id/money_inputid1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etTitle1"
+        android:hint="$"
+        android:inputType="text"
+        android:textSize="15dp"
+        android:layout_centerHorizontal="true"/>
+
+    <EditText
+        android:id="@+id/hour_inputid1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/money_inputid1"
+        android:hint="enter number of hours"
+        android:inputType="text"
+        android:textSize="15dp"
+        android:layout_centerHorizontal="true"/>
+
 </RelativeLayout>

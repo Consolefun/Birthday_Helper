@@ -7,76 +7,75 @@
 
     tools:context=".Chillrelax_activity_list">
 
-    <include
-        android:id="@+id/toolbar_chillrelax"
+  <include
+      android:id="@+id/toolbar_chillrelax"
 
-        layout="@layout/toolbarfood"/>
+      layout="@layout/toolbarfood"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="Click to open FaceBook"/>
-    <Button
-        android:id="@+id/button_facebook"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:onClick="open_facebook"
-        android:text="Facebook" />
-    <TextView
-        android:id="@+id/view2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button_facebook"
-        android:text="Click to open Netflix"/>
-    <Button
-        android:id="@+id/button_netflix"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/view2"
-        android:onClick="open_netflix"
-        android:text="Netflix" />
-    <TextView
-        android:id="@+id/view3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button_netflix"
-        android:text="Click to open Hulu"/>
-    <Button
-        android:id="@+id/button_hulu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/view3"
-        android:onClick="open_hulu"
-        android:text="Hulu" />
-    <TextView
-        android:id="@+id/view4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button_hulu"
-        android:text="Click to open Youtube"/>
-    <Button
-        android:id="@+id/button_youtube"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/view4"
-        android:onClick="open_youtube"
-        android:text="Youtube" />
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="60dp"
+      android:text="Click to open FaceBook"/>
+  <Button
+      android:id="@+id/button_facebook"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="80dp"
+      android:onClick="open_facebook"
+      android:text="Facebook" />
+  <TextView
+      android:id="@+id/view2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/button_facebook"
+      android:text="Click to open Netflix"/>
+  <Button
+      android:id="@+id/button_netflix"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/view2"
+      android:onClick="open_netflix"
+      android:text="Netflix" />
+  <TextView
+      android:id="@+id/view3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/button_netflix"
+      android:text="Click to open Hulu"/>
+  <Button
+      android:id="@+id/button_hulu"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/view3"
+      android:onClick="open_hulu"
+      android:text="Hulu" />
+  <TextView
+      android:id="@+id/view4"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/button_hulu"
+      android:text="Click to open Youtube"/>
+  <Button
+      android:id="@+id/button_youtube"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/view4"
+      android:onClick="open_youtube"
+      android:text="Youtube" />
 
-    <TextView
-        android:id="@+id/view5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button_youtube"
-        android:text="Click to open an anime channel"/>
-    <Button
-        android:id="@+id/button_anime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/view5"
-        android:onClick="open_youtube"
-        android:text="Crunchyroll" />
-
+  <TextView
+      android:id="@+id/view5"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/button_youtube"
+      android:text="Click to open an anime channel"/>
+  <Button
+      android:id="@+id/button_anime"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/view5"
+      android:onClick="open_crunchyroll"
+      android:text="Crunchyroll" />
 
 </RelativeLayout>

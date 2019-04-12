@@ -12,18 +12,18 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 public class EntertainmentFragment extends Fragment {
-    @Nullable
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View thisLayout = inflater.inflate(R.layout.fragment_entertainment,container, false);
-        Button button = (Button) thisLayout.findViewById(R.id.open_map);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),Entertainment_map.class);
-                ((MainActivity) getActivity()).startActivity(intent);
-            }
-        });
-        return thisLayout;
-    }
+  @Nullable
+  @Override
+  public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    View thisLayout = inflater.inflate(R.layout.fragment_entertainment,container, false);
+    Button button = (Button) thisLayout.findViewById(R.id.open_map);
+    button.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Intent intent = new Intent(getActivity(),Entertainment_map.class);
+        ((MainActivity) getActivity()).startActivity(intent);
+      }
+    });
+    return thisLayout;
+  }
 }

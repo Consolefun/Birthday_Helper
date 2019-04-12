@@ -6,8 +6,8 @@ import android.content.Intent;
 
 public class BootNotifyMe extends BroadcastReceiver {
 
-    @Override
-    public void onReceive(Context context, Intent intent) {
-        NotifyMe.init(context);
-    }
+  @Override
+  public void onReceive(Context context, Intent intent) {
+    NotifyMe.init(context);
+  }
 }

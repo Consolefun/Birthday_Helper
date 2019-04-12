@@ -62,8 +62,8 @@ public class Question extends AppCompatActivity implements DatePickerDialog.OnDa
         hour_input = findViewById(R.id.hour_inputid);
         mDisplayTime = findViewById(R.id.Time_view);
         mDisplayDate=findViewById(R.id.Date_view);
-        //etContent = findViewById(R.id.etContent);
-        //Button btnCancel = findViewById(R.id.btnCancel);
+
+
         dpd = DatePickerDialog.newInstance(
                 Question.this,
 
@@ -97,9 +97,11 @@ public class Question extends AppCompatActivity implements DatePickerDialog.OnDa
             }
         });
         savebutton.setOnClickListener(new View.OnClickListener() {
-            Intent intent = new Intent(getApplicationContext(),UserinfoActivity.class);
+            String texttopass = etTitle.getText().toString();
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),UserinfoActivity.class);
+                intent.putExtra(Intent.EXTRA_TEXT,texttopass);
                 savedata();
                 startActivity(intent);
             }

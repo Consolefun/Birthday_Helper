@@ -6,16 +6,16 @@
     android:layout_height="match_parent"
     android:background="@android:color/holo_blue_dark"
     tools:context=".food">
-    <include
-        android:id="@+id/toolbarfood"
+  <include
+      android:id="@+id/toolbarfood"
 
-        layout="@layout/toolbarfood"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="This is food activity"
-        android:textSize="20sp"
-        android:layout_centerHorizontal="true"/>
+      layout="@layout/toolbarfood"/>
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="100dp"
+      android:text="This is food activity"
+      android:textSize="20sp"
+      android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

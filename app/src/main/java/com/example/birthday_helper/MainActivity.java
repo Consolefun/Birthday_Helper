@@ -51,11 +51,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     new EntertainmentFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_userinfo);
         }
-        if(savedInstanceState == null){
+        /*if(savedInstanceState == null){
             Intent intent = new Intent(this, Question.class);
             //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK| Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
             startActivity(intent);
-        }
+        }*/
 
     }
     // add these items to navigation view.

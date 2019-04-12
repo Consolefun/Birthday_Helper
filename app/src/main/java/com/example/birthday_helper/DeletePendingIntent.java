@@ -9,12 +9,12 @@ import static com.example.birthday_helper.Notification.NotificationEntry.TABLE_N
 
 public class DeletePendingIntent extends BroadcastReceiver {
 
-    @Override
-    public void onReceive(Context context, Intent intent) {
-        String notificationId = intent.getStringExtra("_id");
-        com.example.birthday_helper.Notification.NotificationDBHelper mDbHelper = new com.example.birthday_helper.Notification.NotificationDBHelper(context);
-        SQLiteDatabase db = mDbHelper.getWritableDatabase();
-        db.delete(TABLE_NAME, com.example.birthday_helper.Notification.NotificationEntry._ID+" = "+notificationId,null);
-        db.close();
-    }
+  @Override
+  public void onReceive(Context context, Intent intent) {
+    String notificationId = intent.getStringExtra("_id");
+    com.example.birthday_helper.Notification.NotificationDBHelper mDbHelper = new com.example.birthday_helper.Notification.NotificationDBHelper(context);
+    SQLiteDatabase db = mDbHelper.getWritableDatabase();
+    db.delete(TABLE_NAME, com.example.birthday_helper.Notification.NotificationEntry._ID+" = "+notificationId,null);
+    db.close();
+  }
 }
