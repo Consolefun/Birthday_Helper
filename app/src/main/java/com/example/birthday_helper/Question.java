@@ -2,7 +2,6 @@ package com.example.birthday_helper;
 
 
 import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,6 +10,9 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.media.session.PlaybackStateCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -34,19 +36,18 @@ public class Question extends AppCompatActivity implements DatePickerDialog.OnDa
     Calendar now = Calendar.getInstance();
     TimePickerDialog tpd;
     DatePickerDialog dpd;
-    EditText etTitle,esport_input,hour_input,money_input;
+    EditText etTitle,hour_input,money_input;
     TextView mDisplayDate;
     TextView mDisplayTime;
     private SharedPreferences mpreference;
     private SharedPreferences.Editor editor;
     public static final String Share_pref = "Share_pref";
     public static final String key_count1 = "title ";
-    public static final String key_count2 = "sport";
     public static final String key_count3 ="displaydate";
     public static final String key_count4 = "displaytime ";
     public static final String key_count5 = "hour ";
     public static final String key_count6 = "money ";
-    String text,text1,text2,text3,text4,text5;
+    String text,text2,text3,text4,text5;
     Button savebutton;
     String date;
 
@@ -55,11 +56,8 @@ public class Question extends AppCompatActivity implements DatePickerDialog.OnDa
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_question);
         Button btnNotify = findViewById(R.id.btnNotify);
-        savebutton = (Button) findViewById(R.id.save_id);
         etTitle = findViewById(R.id.etTitle);
-        esport_input = findViewById(R.id.sport_inputid);
-        money_input = findViewById(R.id.money_inputid);
-        hour_input = findViewById(R.id.hour_inputid);
+        savebutton = (Button) findViewById(R.id.save_id);
         mDisplayTime = findViewById(R.id.Time_view);
         mDisplayDate=findViewById(R.id.Date_view);
 
@@ -93,37 +91,26 @@ public class Question extends AppCompatActivity implements DatePickerDialog.OnDa
                 //dpd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 //getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 dpd.show(getFragmentManager(), "Datepickerdialog");
+                savedata();
 
             }
         });
-        savebutton.setOnClickListener(new View.OnClickListener() {
-            String texttopass = etTitle.getText().toString();
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),UserinfoActivity.class);
-                intent.putExtra(Intent.EXTRA_TEXT,texttopass);
-                savedata();
-                startActivity(intent);
-            }
-        });
+
         Toolbar toolbar = findViewById(R.id.toolbarquestion);
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setTitle("Birthday Planner");
-
         loaddata();
         updatetext();
+
 
     }
     public void savedata(){
         mpreference = PreferenceManager.getDefaultSharedPreferences(Question.this);
         editor = mpreference.edit();
         editor.putString(key_count1, etTitle.getText().toString());
-        editor.putString(key_count2, esport_input.getText().toString());
         editor.putString(key_count3, mDisplayDate.getText().toString());
         editor.putString(key_count4, mDisplayTime.getText().toString());
-        editor.putString(key_count5, hour_input.getText().toString());
-        editor.putString(key_count6, money_input.getText().toString());
 
         editor.apply();
         editor.commit();
@@ -134,23 +121,15 @@ public class Question extends AppCompatActivity implements DatePickerDialog.OnDa
 
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         text = sharedPreferences.getString(key_count1,"");
-        text1 = sharedPreferences.getString(key_count2,"");
         text2 = sharedPreferences.getString(key_count3,"");
         text3 = sharedPreferences.getString(key_count4,"");
-        text4 = sharedPreferences.getString(key_count5,"");
-        text5 = sharedPreferences.getString(key_count6,"");
 
-
-        //total_count = totalcount1; // This way the value won't be reset
-        //totalcount.setText("Count: "+Integer.toString(total_count));
     }
     public void updatetext(){
         etTitle.setText(text);
-        esport_input.setText(text1);
         mDisplayDate.setText(text2);
         mDisplayTime.setText(text3);
-        hour_input.setText(text4);
-        money_input.setText(text5);
+
     }
 
     @Override
@@ -176,7 +155,7 @@ public class Question extends AppCompatActivity implements DatePickerDialog.OnDa
         now.set(Calendar.HOUR_OF_DAY,hourOfDay);
         now.set(Calendar.MINUTE,minute);
         now.set(Calendar.SECOND,second);
-        Intent intent = new Intent(getApplicationContext(),UserinfoActivity.class);
+        Intent intent = new Intent(getApplicationContext(),Question.class);
         intent.putExtra("Userinfo_fragment","favoritesMenuItem");
         //mDisplayTime = (TextView) findViewById(R.id.Time_view);
         String text = " "+"at ";

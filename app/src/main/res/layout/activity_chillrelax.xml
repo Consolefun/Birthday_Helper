@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="@drawable/images"
     tools:context=".Chillrelax_activity_list">
 
   <include
@@ -15,67 +15,82 @@
   <TextView
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="60dp"
-      android:text="Click to open FaceBook"/>
+      android:layout_marginTop="80dp"
+      android:text="Click to open FaceBook"
+      android:layout_centerHorizontal="true"/>
   <Button
       android:id="@+id/button_facebook"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="80dp"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="100dp"
       android:onClick="open_facebook"
-      android:text="Facebook" />
+      android:text="Facebook"
+      android:background="@android:color/holo_blue_light"/>
   <TextView
       android:id="@+id/view2"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_below="@+id/button_facebook"
+      android:layout_centerHorizontal="true"
       android:text="Click to open Netflix"/>
   <Button
       android:id="@+id/button_netflix"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
       android:layout_below="@+id/view2"
       android:onClick="open_netflix"
-      android:text="Netflix" />
+      android:text="Netflix"
+      android:background="@android:color/holo_red_light"/>
   <TextView
       android:id="@+id/view3"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_below="@+id/button_netflix"
+      android:layout_centerHorizontal="true"
       android:text="Click to open Hulu"/>
   <Button
       android:id="@+id/button_hulu"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_below="@+id/view3"
+      android:layout_centerHorizontal="true"
       android:onClick="open_hulu"
-      android:text="Hulu" />
+      android:text="Hulu"
+      android:background="@android:color/holo_green_light"/>
   <TextView
       android:id="@+id/view4"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_below="@+id/button_hulu"
+      android:layout_centerHorizontal="true"
       android:text="Click to open Youtube"/>
   <Button
       android:id="@+id/button_youtube"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
       android:layout_below="@+id/view4"
       android:onClick="open_youtube"
-      android:text="Youtube" />
+      android:text="Youtube"
+      android:background="@android:color/holo_red_light"/>
 
   <TextView
       android:id="@+id/view5"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_below="@+id/button_youtube"
+      android:layout_centerHorizontal="true"
       android:text="Click to open an anime channel"/>
   <Button
       android:id="@+id/button_anime"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_below="@+id/view5"
+      android:layout_centerHorizontal="true"
       android:onClick="open_crunchyroll"
-      android:text="Crunchyroll" />
+      android:text="Crunchyroll"
+      android:background="@android:color/holo_orange_light"/>
 
 </RelativeLayout>

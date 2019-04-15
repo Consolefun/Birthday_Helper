@@ -4,18 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_blue_dark"
+    android:background="@drawable/food"
     tools:context=".food">
   <include
       android:id="@+id/toolbarfood"
 
       layout="@layout/toolbarfood"/>
   <TextView
+      android:id="@+id/view"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="100dp"
-      android:text="This is food activity"
-      android:textSize="20sp"
-      android:layout_centerHorizontal="true"/>
+      android:layout_marginTop="60dp"
+      android:text="Click to open all recipes website"/>
+  <Button
+      android:id="@+id/button_netflix"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/view"
+      android:onClick="open_allrecipes"
+      android:text="food" />
 
 </RelativeLayout>

@@ -23,6 +23,22 @@
         android:textColor="@color/colorPrimaryDark"
         android:textSize="15dp"
         android:layout_marginTop="80dp"/>
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:hint="Enter your name"
+        android:inputType="textPersonName"
+        android:textColor="@color/design_default_color_primary"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -31,6 +47,8 @@
         android:textColor="@color/colorPrimaryDark"
         android:textSize="15dp"
         android:layout_marginTop="140dp"/>
+
+
     <Button
         android:id="@+id/btnNotify"
         android:layout_width="wrap_content"
@@ -62,87 +80,7 @@
          />
 
 
-    <EditText
-        android:id="@+id/etTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="100dp"
-        android:layout_centerHorizontal="true"
-        android:hint="Enter your name"
-        android:inputType="textPersonName"
-        android:textColor="@color/design_default_color_primary"
-        android:textSize="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <TextView
-        android:id="@+id/moneyquestion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/design_default_color_primary"
-        android:text="How much money do\nyou want to spend?"
-        android:textSize="15dp"
-        android:layout_marginTop="280dp"/>
 
-    <EditText
-        android:id="@+id/money_inputid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/moneyquestion"
-        android:layout_marginTop="-2dp"
-        android:hint="$"
-        android:inputType="text"
-        android:textSize="15dp"
-        android:layout_centerHorizontal="true"/>
-    <TextView
-        android:id="@+id/hourquestion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/money_inputid"
-        android:textColor="@color/design_default_color_primary"
-        android:text="How many hours\ndo you want to spend?"
-        android:textSize="15dp"
-        />
-    <EditText
-        android:id="@+id/hour_inputid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/hourquestion"
-        android:hint="enter number of hours"
-        android:inputType="text"
-        android:textSize="15dp"
-        android:layout_centerHorizontal="true"/>
-    <TextView
-        android:id="@+id/sportquestion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/hour_inputid"
-        android:textColor="@color/design_default_color_primary"
-        android:text="Do you like sport?\n(pick yes or no)"
-        android:textSize="15dp"
-        />
-    <EditText
-        android:id="@+id/sport_inputid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/sportquestion"
-        android:hint="enter yes or no"
-        android:inputType="textPersonName"
-        android:textSize="15dp"
-        android:layout_centerHorizontal="true"/>
-    <Button
-        android:id="@+id/save_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/sport_inputid"
-        android:text="Save"
-        android:layout_centerHorizontal="true"/>
 
 
 </RelativeLayout>

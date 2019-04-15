@@ -18,5 +18,22 @@
         android:text="Open list of activities"
         android:layout_marginTop="130dp"
         />
+    <TextView
+        android:id="@+id/cook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do you want to learn how to cook?"
+        android:textSize="20dp"
+        android:layout_below="@+id/open_chillrelax"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/open_cook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Open list of recipes"
+        android:layout_below="@+id/cook"
+        />
 
 </RelativeLayout>

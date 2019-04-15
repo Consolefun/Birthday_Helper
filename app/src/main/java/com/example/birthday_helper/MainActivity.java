@@ -46,11 +46,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-        if(savedInstanceState== null) {
+        /*if(savedInstanceState== null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new EntertainmentFragment()).commit();
+                    new UserFragment()).commit();
             navigationView.setCheckedItem(R.id.nav_userinfo);
-        }
+        }*/
         /*if(savedInstanceState == null){
             Intent intent = new Intent(this, Question.class);
             //intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK| Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT);
@@ -63,8 +63,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch(menuItem.getItemId()){
             case R.id.nav_userinfo:
-                Intent intent = new Intent(this, UserinfoActivity.class);
-                this.startActivity(intent);
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new UserFragment()).commit();
                 break;
             case R.id.nav_entertainment:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
