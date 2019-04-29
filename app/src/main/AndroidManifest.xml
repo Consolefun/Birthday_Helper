@@ -21,7 +21,9 @@
         android:roundIcon="@mipmap/ic_reminder_birthcake_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".User_recipes"></activity>
+        <activity android:name=".Sport_channel"></activity>
+        <activity android:name=".About" />
+        <activity android:name=".User_recipes" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

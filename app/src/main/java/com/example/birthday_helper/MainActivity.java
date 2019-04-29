@@ -111,8 +111,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch(item.getItemId()){
-            case R.id.food_id:
-                Intent intent1 = new Intent(this, food.class);
+            case R.id.about_id:
+                Intent intent1 = new Intent(this, About.class);
                 this.startActivity(intent1);
                 return true;
 

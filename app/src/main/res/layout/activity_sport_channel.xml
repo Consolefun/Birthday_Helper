@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Sport_channel"
+    android:background="@drawable/sport">
+
+    <include
+        android:id="@+id/toolbarsport"
+        layout="@layout/toolbarfood"/>
+
+    <TextView
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true"
+        android:text="Click to open ESPN"/>
+
+    <Button
+        android:id="@+id/espn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:layout_centerHorizontal="true"
+        android:onClick="open_espn"
+        android:text="espn" />
+
+    <TextView
+        android:id="@+id/view1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/espn"
+        android:text="Click to open NFL RedZone"/>
+
+    <Button
+        android:id="@+id/NFL"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view1"
+        android:onClick="open_NFL"
+        android:text="NFL_RedZone" />
+
+    <TextView
+        android:id="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/NFL"
+        android:text="Click to open Fox Sports"/>
+
+    <Button
+        android:id="@+id/foxsport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/view2"
+        android:onClick="open_foxsport"
+        android:text="Foxsport" />
+
+    <TextView
+        android:id="@+id/view3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/foxsport"
+        android:text="Click to open NBC sports"/>
+
+    <Button
+        android:id="@+id/NBC_sports"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view3"
+        android:onClick="open_nbc"
+        android:text="NBC" />
+
+
+</RelativeLayout>

@@ -30,10 +30,18 @@ public class food extends AppCompatActivity {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.allrecipes.com/"));
         startActivity(browserIntent);
     }
+    public void open_italian(View view){
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.tasteofhome.com/cuisine/italian-recipes/"));
+        startActivity(browserIntent);
+    }
+    public void open_asian(View view){
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.foodandwine.com/slideshows/30-southeast-asian-recipes"));
+        startActivity(browserIntent);
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater _inflater = getMenuInflater();
-        _inflater.inflate(R.menu.menu, menu);
+        _inflater.inflate(R.menu.menu_food, menu);
         return true;
     }
     @Override

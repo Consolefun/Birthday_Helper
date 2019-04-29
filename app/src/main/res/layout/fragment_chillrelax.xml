@@ -35,5 +35,22 @@
         android:text="Open list of recipes"
         android:layout_below="@+id/cook"
         />
+    <TextView
+        android:id="@+id/sport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do you want to watch sports?"
+        android:textSize="20dp"
+        android:layout_below="@+id/open_cook"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/open_sport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Open sport channels"
+        android:layout_below="@+id/sport"
+        />
 
 </RelativeLayout>

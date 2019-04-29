@@ -1,9 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".User_recipes">
+    tools:context="com.example.birthday_helper.User_recipes">
 
-</android.support.constraint.ConstraintLayout>
+    <include
+        android:id="@+id/toolbar_user_recipe"
+        layout="@layout/toolbarfood"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/activity_container">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="What is your recipes?"
+            android:layout_marginTop="60dp"
+            android:id="@+id/heading"
+            android:textSize="18sp"
+            android:textColor="#000"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create recipes"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/open_dialog"
+            android:layout_below="@+id/heading"
+            android:layout_marginTop="20sp"/>
+
+       <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/input_display"
+        android:layout_below="@+id/open_dialog"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="15sp"
+        android:textColor="#000"/>
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>

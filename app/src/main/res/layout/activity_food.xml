@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -17,11 +21,41 @@
       android:layout_marginTop="60dp"
       android:text="Click to open all recipes website"/>
   <Button
-      android:id="@+id/button_netflix"
+      android:id="@+id/allrecipes"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_below="@+id/view"
       android:onClick="open_allrecipes"
-      android:text="food" />
+      android:text="open" />
+
+  <TextView
+    android:id="@+id/view1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/allrecipes"
+    android:text="Click to open Italian recipes"/>
+  <Button
+      android:id="@+id/italian"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/view1"
+      android:onClick="open_italian"
+      android:text="open" />
+  <TextView
+      android:id="@+id/view2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/italian"
+      android:text="Click to open Southeast Asian recipes"/>
+  <Button
+      android:id="@+id/asia"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/view2"
+      android:onClick="open_asian"
+      android:text="open" />
+
+
 
 </RelativeLayout>
+</ScrollView>

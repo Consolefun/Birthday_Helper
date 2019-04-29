@@ -17,6 +17,8 @@ public class ChillrelaxFragment extends Fragment {
         View thisLayout = inflater.inflate(R.layout.fragment_chillrelax,container, false);
         Button button = (Button) thisLayout.findViewById(R.id.open_chillrelax);
         Button button1 = (Button) thisLayout.findViewById(R.id.open_cook);
+        Button button2 = (Button) thisLayout.findViewById(R.id.open_sport);
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -28,6 +30,13 @@ public class ChillrelaxFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(),food.class);
+                ((MainActivity) getActivity()).startActivity(intent);
+            }
+        });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),Sport_channel.class);
                 ((MainActivity) getActivity()).startActivity(intent);
             }
         });
