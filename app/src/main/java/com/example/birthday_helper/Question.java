@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.media.session.PlaybackStateCompat;
@@ -78,23 +79,53 @@ public class Question extends AppCompatActivity implements DatePickerDialog.OnDa
                 now.get(Calendar.SECOND),
                 false
         );
-        /*btnCancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                NotifyMe.cancel(getApplicationContext(),"test");
-            }
-        });*/
+
         btnNotify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                //dpd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                //getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
                 dpd.show(getFragmentManager(), "Datepickerdialog");
                 savedata();
-
             }
         });
+
+        Button btn_map = findViewById(R.id.entertainment_map);
+        btn_map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Entertainment_map.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_activity = findViewById(R.id.chill_relax);
+        btn_activity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Chillrelax_activity_list.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_food = findViewById(R.id.food_recipes);
+        btn_food.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), food.class);
+                startActivity(intent);
+            }
+        });
+
+        Button btn_sports = findViewById(R.id.sports_id);
+        btn_sports.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Sport_channel.class);
+                startActivity(intent);
+            }
+        });
+
 
         Toolbar toolbar = findViewById(R.id.toolbarquestion);
         setSupportActionBar(toolbar);

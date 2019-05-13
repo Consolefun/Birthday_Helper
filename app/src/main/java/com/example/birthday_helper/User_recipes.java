@@ -37,8 +37,6 @@ public class User_recipes extends AppCompatActivity implements User_recipes_cust
         Toolbar toolbar = findViewById(R.id.toolbar_user_recipe);
         setSupportActionBar(toolbar);
 
-
-        //toolbar.setPadding(0,getStatusBarHeight(),0,0);
         getSupportActionBar().setTitle("User's Recipes");
 
         mOpenDialog.setOnClickListener(new View.OnClickListener() {

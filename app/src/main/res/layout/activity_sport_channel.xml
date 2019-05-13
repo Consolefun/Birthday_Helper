@@ -26,6 +26,7 @@
         android:layout_below="@+id/view"
         android:layout_centerHorizontal="true"
         android:onClick="open_espn"
+        android:background="@android:color/holo_red_light"
         android:text="espn" />
 
     <TextView
@@ -43,6 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/view1"
         android:onClick="open_NFL"
+        android:background="@android:color/holo_blue_dark"
         android:text="NFL_RedZone" />
 
     <TextView
@@ -60,6 +62,7 @@
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/view2"
         android:onClick="open_foxsport"
+        android:background="@android:color/holo_red_dark"
         android:text="Foxsport" />
 
     <TextView
@@ -76,6 +79,7 @@
         android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
         android:layout_below="@+id/view3"
+        android:background="@android:color/holo_blue_light"
         android:onClick="open_nbc"
         android:text="NBC" />
 

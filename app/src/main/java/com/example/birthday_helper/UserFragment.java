@@ -32,12 +32,6 @@ public class UserFragment extends Fragment {
     String text,text2,text3,text4,text5;
 
     @Override
-   /*public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if(savedInstanceState!=null){
-            onActivityCreated(savedInstanceState);
-        }
-    }*/
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable final Bundle savedInstanceState) {
         thisLayout = inflater.inflate(R.layout.activity_userinfo,container, false);
@@ -57,23 +51,5 @@ public class UserFragment extends Fragment {
         return thisLayout;
     }
 
-   /*public void onSaveInstanceState( Bundle outState){
-        super.onSaveInstanceState(outState);
-        outState.putString("some",money_input.getText().toString());
-    }
-    public void onActivityCreated(Bundle savedInstanceState){
-        super.onActivityCreated(savedInstanceState);
-        savebutton = (Button) thisLayout.findViewById(R.id.save_id);
-        savebutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(getActivity(),Question.class);
-                ((MainActivity) getActivity()).startActivity(intent);
-
-            }
-        });
-
-    }*/
 
 }
